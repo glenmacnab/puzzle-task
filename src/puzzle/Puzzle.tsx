@@ -15,11 +15,13 @@ const GameBoard = styled('div')`
 const StyledButton = styled('button')`
     position: relative;
     background: #aaa;
-    text-align: left;
-    padding: 10px;
+    padding: 10px  20px 10px;
     margin: 10px;
     border: solid 2px #333;
     border-radius: 4px;
+`
+const StyledControls= styled('div')`
+    text-align: center;
 `
 
 const StyledComplete = styled('div')`
@@ -29,7 +31,6 @@ const StyledComplete = styled('div')`
     font-size: 50px;
     color: #fff;
 `
-
 
 export default class Puzzle extends React.Component {
 
@@ -118,7 +119,6 @@ export default class Puzzle extends React.Component {
         return pmoves;
     }
 
-
     /**
      * @param pos1  A position in the array
      * @param pos2  A position in the array
@@ -140,7 +140,6 @@ export default class Puzzle extends React.Component {
     /**
      * @param pos  The clicked index.
      */
-
     onClicked(pos: number) {
         if (this.isAdjacent(this.state.currentPos, pos)) {
             this.swapTiles(this.state.currentPos, pos);
@@ -188,16 +187,13 @@ export default class Puzzle extends React.Component {
                         </StyledComplete>
                     )
                     }
-
-
-
                 </GameBoard>
-                <div>
+                <StyledControls>
                     <StyledButton onClick={(e) => this.initBoard(9)}>3x3</StyledButton>
                     <StyledButton onClick={(e) => this.initBoard(16)}> 4x4</StyledButton>
                     <StyledButton onClick={(e) => this.initBoard(25)}> 5x5</StyledButton>
                     <StyledButton onClick={(e) => this.initBoard(36)}> 6x6</StyledButton>
-                </div>
+                </StyledControls>
             </div>
 
 
