@@ -4,6 +4,7 @@ import Tile from './Tile';
 
 
 const GameBoard = styled('div')`
+    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     background: #aaa;
     padding: 10px;
@@ -20,7 +21,7 @@ const StyledButton = styled('button')`
     border: solid 2px #333;
     border-radius: 4px;
 `
-const StyledControls= styled('div')`
+const StyledControls = styled('div')`
     text-align: center;
 `
 
